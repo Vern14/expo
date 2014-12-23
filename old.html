@@ -7,9 +7,9 @@
 
 <style>
 
-#header{ position: fixed; background: white; top: -20px; padding-bottom:30px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+#header{ font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
-	        box-shadow: 0 8px 6px -6px 	#C4C4C4; width:100%; height:70px;}
+	        box-shadow: 0 8px 6px -6px 	#C4C4C4; width:100%; height:70px;  }
 #grid1{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
 	        box-shadow: 0 8px 6px -6px 	#C4C4C4;  -webkit-column-count: 4; /* Chrome, Safari, Opera */
@@ -23,126 +23,52 @@
     column-count: 3; }
 
 
-h2{ text-align: center; margin-top:2%;}
-#webapp1,#webapp2,#webapp3,#webapp4,#website1,#website2,#website3,#website4{ border: 1px solid silver; margin-bottom:20px; background:#C4C4C4; text-align: center; }
+h1{text-align: center; bottom:50px;}
+#webapp1,#webapp2,#webapp3,#webapp4,#website1,#website2,#website3,#website4{position: relative; border: 1px solid silver; margin-bottom:20px; background:#C4C4C4; text-align: center; }
 i,button{color:#181818; text-align: center;}
-button{border:0px solid silver; padding: 1%;  background: hite; text-align: center; width: 17.5%; margin-left:0.7%;}
+button{border:0px solid silver; padding: 1%;  background: white; border-radius: 3px; text-align: center; width: 12%;}
 #left,#right{position:relative ; bottom: 160px; }
-body{overflow-x:hidden;}
+body{overflow:idden;}
 button:hover{background: #C4C4C4; }
 #divider{background: white; }
 #webapp1:hover{ opacity:0.8; }
-#tagline{margin-top:0%; font-size: 13.5px; width:100%; padding-top:2%;}
+#tagline{position:relative; bottom:25px; font-size: 13.5px; width:100%;}
+a{position: relative; top:5px; margin-left:-4px; }
 
-#allh1{font-size: 24px; }
-#filters,#closefilters{position: fixed; display: none; }
-#filters{position: fixed; top : 17.5%; width:100%;  }
-#filtersbutton,#closefilters{border:1px solid silver;  position: relative;  bottom:50px; background: white; width:10%; }
-#filtersbutton:hover,#closefilters:hover{background: #C4C4C4; }
-#webapph2{margin-top:-11%;}
-a{text-decoration: none;}
-
-
-
-  /* Scrollbar */
-::-webkit-scrollbar {
-	width: 15px;
-  background: white; 
-  cursor:pointer;
-}
-
-/* Button */
-::-webkit-scrollbar-button {
-
-  width: 15px;
-  height: 79px;
-
-}
-
-
-
-
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 80px;
-    border-radius: 80px;
-	  background: white; 
-	
-	 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 50px;
-   
-    background: #C4C4C4;
-	
-    
-}
-
-#home,#projects,#database,#design,#development,#photo,#leadership,#swe{position: relative; margin-top:-180%; border:0px solid silver;  background: white; width:9%; font-weight: bold; padding:0.5%; left:12%;}
-#home:hover,#projects:hover,#database:hover,#design:hover,#development:hover,#photo:hover,#leadership:hover,#swe:hover{ background: #C4C4C4;}
 </style>
 
 
-   <div id="header">  <h2> Expo</h2> 
  
-   		<a href="about.html"><button id="home">Home</button></a>		
-	    <a href="database.html"><button id="database">Database</button></a>
-		<a href="design.html"><button id="design">Design</button></a>
-		<a href="development.html"><button id="development">Development</button></a>		
-		<a href="leadership.html"><button id="leadership">Leadership</button></a>
-		<a href="photo.html"><button id="photo">Photo</button></a>
-		<a href="index.html"><button id="projects">Projects</button></a>
-		<a href="swe.html"><button id="swe">SoftEng</button></a><br>
-                
-				<button id ="filtersbutton" onclick="showfilters()">Menu</button><button id ="closefilters" onclick="hidefilters()">Filters</button>
-		
-				<div id ="filters">
-					<button id="divider" ><b >FILTER BY TYPE</b></button><br>
-					<button onclick="showall()">No Filter</button><br>
-					<button id="webapps" onclick="myFunction()">WebApps</button><br>
-					<button id="websites" onclick="myFunction2()">Websites</button><br>
-					<button id="divider"><b>FILTER BY TOOLS</b></button><br>
-					<button onclick="myFunction()">No Filter</button><br>
-					<button>HTML & CSS</button><br>
-					<button>JavaScript</button><br>
-					<button>J-Query</button><br>				
-					<button>Php & MySQL</button><br>
-					<button>WordPress</button><br>
-					<button>Bootstrap</button><br>					
-					<button id="divider"><b>FILTER BY PROJECT</b></button><br>					
-					<button>Solo Project</button><br>
-					<button>Group Project</button><br>
-					<button id="divider"><b>FILTER BY YEAR</b></button><br>					
-					<button>2014</button><br>
-					<button>2013</button><br>
-				
-				
-				</div>
-			
-				
-	
-		
-		
-		
-        </div>
-	
-	
-<body ><br><br><br>
+<body>
      
-		
-		
+		  <div id="header">
+                <h1>The NewYork Times</h1> <center id="tagline">Mobile Responsive websites and webapps</center>
+				<button id="divider" ><b >FILTER BY TYPE</b></button><br>
+				<button onclick="showall()">No Filter</button><br>
+				<button onclick="myFunction()">WebApps</button><br>
+				<button onclick="myFunction2()">Websites</button><br>
+				<button id="divider"><b>FILTER BY TOOLS</b></button><br>
+				<button onclick="myFunction()">No Filter</button><br>
+				<button>HTML & CSS</button><br>
+				<button>JavaScript</button><br>
+				<button>J-Query</button><br>				
+				<button>Php & MySQL</button><br>
+				<button>WordPress</button><br>
+				<button>Bootstrap</button><br>
+				
+				
 			
-		<center id="tagline">Showcase your Mobile Responsive Websites and Webapps</center>	
-		<center id="websiteh2"><h3>Websites</h3></center>
+				
+
+        </div>
+		
+			<center id="allh1"><h2>Websites and WebApps</h2></center>
+			
+		<center id="websiteh2"><h2>Websites</h2></center>
         <div id="grid1">
 		
-                <a href="proej1.html">
-				<div id="webapp1" class="webapp">
-					<img src="http://www.eurweb.com/wp-content/uploads/2012/12/neyo.jpeg" style="width:100%;height:228px">
-				</a>
+                <div id="webapp1" class="webapp">
+					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					<b>:<a>.</a></b>
@@ -157,7 +83,7 @@ a{text-decoration: none;}
 					</p>
 				</div>
 				 <div id="webapp2" class="webapp">
-					<img src="http://vzidana.files.wordpress.com/2014/12/1.jpg" style="width:100%;height:228px">
+					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					
@@ -204,13 +130,7 @@ a{text-decoration: none;}
 				
 				</div>
 				
-				
-				
-				
-				
-				
-				
-				<center id="webapph2"><h3>Web Apps</h3></center>
+				<center id="webapph2"><h2>Web Apps</h2></center>
 				
 				  <div id="grid2">
 		
@@ -288,36 +208,24 @@ a{text-decoration: none;}
                 
         </div>
 		
-<script>
+						<script>
 function myFunction() {
-hidefilters();
+
 document.getElementById("grid1").style.display = "none";
 document.getElementById("websiteh2").style.display = "none";
 document.getElementById("webapph2").style.display = "block";
-document.getElementById("webapph2").style.marginTop = "1%";
 document.getElementById("grid2").style.display = "block";
-
-document.getElementById("tagline").style.display = "none";
-document.getElementById("filters").style.position = "relative";
-document.getElementById("filters").style.marginTop = "-2.3%";
-
-
+document.getElementById("allh1").style.display = "none";
 }
 
 function myFunction2() {
-hidefilters();
+
 document.getElementById("grid2").style.display = "none";
 document.getElementById("websiteh2").style.display = "block";
-
 document.getElementById("webapph2").style.display = "none";
-
+document.getElementById("allh1").style.display = "none";
 document.getElementById("grid1").style.display = "block";
 
-
-document.getElementById("tagline").style.display = "none";
-document.getElementById("filters").style.position = "relative";
-document.getElementById("filters").style.marginTop = "-2.3%";
-document.getElementById("grid2").style.marginTop = "-1%";
 
 }
 
@@ -327,48 +235,8 @@ document.getElementById("grid1").style.display = "block";
 document.getElementById("grid2").style.display = "block";
 document.getElementById("websiteh2").style.display = "block";
 document.getElementById("webapph2").style.display = "block";
-document.getElementById("grid2").style.marginTop = "-1%";
-
-document.getElementById("tagline").style.display = "block";
-document.getElementById("filters").style.position = "relative";
-document.getElementById("filters").style.marginTop = "-1.5%";
-
+document.getElementById("allh1").style.display = "block";
 }
-
-function showfilters() {
-
-document.getElementById("filters").style.display = "block";
-document.getElementById("grid1").style.marginLeft = "19.5%";
-document.getElementById("grid2").style.marginLeft = "19.5%";
-
-document.getElementById("filtersbutton").style.display = "none";
-document.getElementById("closefilters").style.display = "block";
-document.getElementById("closefilters").innerHTML = "Close Menu";
-document.getElementById("grid1").style.opacity = "0.5";
-document.getElementById("grid2").style.opacity = "0.5";
-document.body.style.overflow = "hidden";
-
-
-
-}
-
-function hidefilters() {
-
-document.getElementById("filters").style.display = "none";
-
-document.getElementById("filtersbutton").style.display = "block";
-document.getElementById("closefilters").style.display = "none";
-document.getElementById("filtersbutton").innerHTML = "Menu";
-
-document.getElementById("grid1").style.marginLeft = "13%";
-document.getElementById("grid2").style.marginLeft = "13%";
-document.getElementById("grid1").style.opacity = "1";
-document.getElementById("grid2").style.opacity = "1";
-document.body.style.overflowY = "scroll";
-
-
-}
-
 </script>
 </body>
 </html>
