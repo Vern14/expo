@@ -2,19 +2,53 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<script>
 
+
+onload=function(){
+ document.getElementById("topbutton").style.opacity = "0.1";
+  document.getElementById("gridd").style.display = "none";
+} 
+onscroll = function() {
+document.getElementById("expo").style.display = "block";
+ 
+
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop<3) {
+  document.getElementById("topbutton").style.opacity = "0.1";
+   document.getElementById("gridd").style.display = "none";
+  document.getElementById("header").style.marginTop = "0%";
+  document.getElementById("filtersbutton").style.marginTop = "0%";
+ 
+  
+}
+else{
+   document.getElementById("topbutton").style.opacity = "1";
+      document.getElementById("gridd").style.display = "block";
+
+  document.getElementById("header").style.marginTop = "-2.6%";
+   document.getElementById("header").style.marginLeft = "0.5%";
+    document.getElementById("header").style.width = "99%";
+   document.getElementById("gridd").style.marginTop = "-560.06%";
+  document.getElementById("filtersbutton").style.marginTop = "0.5%";
+
+ 
+}
+}
+</script>
 </head>
 
 <style>
 
-#header{ position: fixed; background: white; top: -20px; padding-bottom:30px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+#topbutton{border:0px solid #C4C4C4;  position: fixed; background:white;  width:7%; font-size:140px; font-weight:old; color: silver; border-radius:0px; margin-left:71.8%; margin-top:33%; }
+#header{ position: fixed; background: white; top: -20px; padding-bottom:33px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
 	        box-shadow: 0 8px 6px -6px 	#C4C4C4; width:100%; height:70px;  }
-#grid1{ width: 80%;  background: 	C4C4C4; margin: 11%; margin-top: 6.63%; -webkit-column-count: 1; /* Chrome, Safari, Opera */
+#grid1{ width: 80%;  background: 	C4C4C4; margin: 20.5%; margin-top: 6.83%; -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1; }	
 
-#grid2{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+#grid3{ width: 80%;  background: 	#C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
 	        box-shadow: 0 8px 6px -6px 	#C4C4C4;  -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
@@ -24,7 +58,7 @@
 h2{ text-align: center; margin-top:2%;}
 #webapp1,#webapp2,#webapp3,#webapp4,#website1,#website2,#website3,#website4{position: relative; border: 1px solid silver; margin-bottom:20px; background:#C4C4C4; text-align: center; }
 i,button{color:#181818; text-align: center;}
-button{border:0px solid silver; padding: 1%;  background: hite; text-align: center; width: 17.5%; margin-left:0.7%;}
+button{border:0px solid silver; padding: 1%;  background: hite; text-align: enter; margin-left:0.7%;}
 #left,#right{position:relative ; bottom: 160px; }
 body{overflow:idden;}
 button:hover{background: #C4C4C4; }
@@ -39,9 +73,7 @@ button:hover{background: #C4C4C4; }
 #filtersbutton:hover,#closefilters:hover{background: #C4C4C4; }
 #webapph2{margin-top:-11%;}
 a{text-decoration: none;}
-img{-webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
-	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
-	        box-shadow: 0 8px 6px -6px 	#C4C4C4;}
+img{margin-top:1%; width:70%;}
 
 
 			
@@ -86,11 +118,28 @@ img{-webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 
 #home,#projects,#database,#design,#development,#photo,#leadership,#swe{position: relative; margin-top:-180%; border:0px solid silver;  background: white; width:9%; font-weight: bold; padding:0.5%; left:12%;}
 #home:hover,#projects:hover,#database:hover,#design:hover,#development:hover,#photo:hover,#leadership:hover,#swe:hover{ background: #C4C4C4;}
-
+#design{border-top:4px solid silver;  border-radius:0px;  text-transform: uppercase; font-style:oblique; }
+ul{list-style-type:square; margin-top:1%; }
+ol{list-style-type:upper-roman;}
+#scotboard{text-align: left;border:0px solid  #C4C4C4; background: white; font-weight:bold; width:73.5%; -webkit-box-shadow: 0 10px 6px -7px #C4C4C4;
+	   -moz-box-shadow: 0 10px 6px -7px #C4C4C4;
+	        box-shadow: 0 10px 6px -7px #C4C4C4; padding-botton:2%;}
+#scotboard:hover{background: #C4C4C4; }
+#scotboard>a{text-decoration:none; color: black;}
+#scotboard2{text-align: left;border:0px solid  #C4C4C4; background: white; font-weight:bold; width:69%; -webkit-box-shadow: 0 10px 6px -7px #C4C4C4;
+	   -moz-box-shadow: 0 10px 6px -7px #C4C4C4;
+	        box-shadow: 0 10px 6px -7px #C4C4C4; padding-botton:2%;}
+#scotboard2:hover{background: #C4C4C4; -webkit-box-shadow: 0 10px 6px -7px white;
+	   -moz-box-shadow: 0 10px 6px -7px white;
+	        box-shadow: 0 10px 6px -7px white;}
+#scotboard2>a{text-decoration:none; color: black;}
+#gridd{ position: fixed; background:#E7E7E7; font-weight:bold;  margin-top:-563.95%; margin-left:3%; padding:2px; width:93%; }
+#gridd>span{ margin-left:4.9%; background:ilver; width:0%; }
+#gridd>span:hover{background: rgba(0,0,0,0.15); cursor:pointer;}
 </style>
 
  <div id="header">
-                <h2>Design</h2>
+                <h2 id="expo">Design</h2>
 		<a href="about.html"><button id="home">Home</button></a>		
 	    <a href="database.html"><button id="database">Database</button></a>
 		<a href="design.html"><button id="design">Design</button></a>
@@ -113,11 +162,81 @@ img{-webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 		
 				
         <div id="grid1">
-	
-		 <img src="http://vzidana.files.wordpress.com/2014/12/1-2.jpg" style="width:38%; height:440px;">
+		<!--Top Button-->
+		<span id="topbutton" onclick ="scrolltop()" title="Scroll to the top">^</span>
+		
+		<ol>	      
+			  <li><button id="scotboard"><b>ScotBoard's System Architecture (Front and Back-end)</b></button> 
+				<ul>
+					 <img src="http://groundsounds.com/wp-content/uploads/2014/10/blogmedia-M_NeYo_041213-630x349.jpg">
+				</ul>
+			  </li>
+			  
+			  <br>
+			  
+			   <li><button id="scotboard"><b>ScotBoard's Graphical User Interface (GUI) evolution</b></button> 
 
-	<p>#UNDER CONSTRUCTION</p>
-				</div>
+					<ul><br><button id="scotboard2"><b>UI 1 design</b></button>  
+						  <li>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui1.jpg">
+						 </li><br>
+						 
+						 <br><button id="scotboard2"><b>UI 1 Implementation</b></button> <br>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui1-impl.jpg">
+					</ul><br>
+					
+					
+					<ul><br><button id="scotboard2"><b>UI 2 design</b></button> 
+						  <li>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui2.jpg">
+							<br><br><button id="scotboard2"><b>Digital Mockup for UI2</b></button>   <br>
+							<button id="scotboard2"><b>Tool:</b> MS Paint</button> <br>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard.jpg">
+						 </li>
+						 
+						 <br><button id="scotboard2"><b>UI 2 Implementation</b></button> <br>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui2-impl.jpg">
+					</ul>
+					
+					
+					<ul><br><button id="scotboard2"><b>UI 3 design</b></button> 
+						  <li>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui3.jpg">
+						 </li>
+						 
+						 <br><button id="scotboard2"><b>UI 3 Implementation</b></button> <br>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui3-impl.jpg">
+					</ul>
+					
+					<ul><br><button id="scotboard2"><b>UI 4 design</b></button> 
+						  <li>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui4.jpg">
+						 </li>
+						 
+						 <br><button id="scotboard2"><b>UI 4 Implementation</b></button> <br>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui4-impl.jpg">
+					</ul>
+					
+					<ul><br><button id="scotboard2"><b>UI 5 design (Single Page Application)</b></button> 
+						  <li>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui5.jpg">
+						 </li>
+						 
+						 <br><button id="scotboard2"><b>UI 5 Implementation</b></button> <br>
+							<img src="https://vzidana.files.wordpress.com/2014/12/scotboard-ui5-impl.jpg">
+					</ul>
+				
+			  </li><br>
+			  
+			
+		 </ol>
+		
+		
+		
+	
+		
+		
+		</div>
 				
 				
 				
@@ -125,24 +244,37 @@ img{-webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 				
 		
 	
-		 <div id="grid3">
-                
+		 <div id="gridd">               
+					<span onclick="architecture()">ScotBoard's System Architecture</span>
+					<span onclick="UI1()">ScotBoard's UI 1</span>
+					<span onclick="UI2()">ScotBoard's UI 2</span>
+					<span onclick="UI3()">ScotBoard's UI 3</span>
+					<span onclick="UI4()">ScotBoard's UI 4</span>
+					<span onclick="UI5()">ScotBoard's UI 5</span>
+					
         </div>
 		
-						<script>
+					   
+			   
+		
+<script>
 function myFunction() {
-
+hidefilters();
 document.getElementById("grid1").style.display = "none";
 document.getElementById("websiteh2").style.display = "none";
 document.getElementById("webapph2").style.display = "block";
-document.getElementById("webapph2").style.marginTop = "1%";
+document.getElementById("webapph2").style.marginTop = "2%";
 document.getElementById("grid2").style.display = "block";
+
+document.getElementById("tagline").style.display = "none";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-2.3%";
 
 
 }
 
 function myFunction2() {
-
+hidefilters();
 document.getElementById("grid2").style.display = "none";
 document.getElementById("websiteh2").style.display = "block";
 
@@ -150,6 +282,12 @@ document.getElementById("webapph2").style.display = "none";
 
 document.getElementById("grid1").style.display = "block";
 
+
+document.getElementById("tagline").style.display = "none";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-2.3%";
+document.getElementById("grid2").style.marginTop = "-1%";
+document.getElementById("websiteh2").style.marginTop = "2%";
 
 }
 
@@ -159,8 +297,15 @@ document.getElementById("grid1").style.display = "block";
 document.getElementById("grid2").style.display = "block";
 document.getElementById("websiteh2").style.display = "block";
 document.getElementById("webapph2").style.display = "block";
-document.getElementById("webapph2").style.marginTop = "-11%";
+document.getElementById("grid2").style.marginTop = "-1%";
 
+document.getElementById("tagline").style.display = "block";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-1.5%";
+document.getElementById("grid1").style.opacity = "1";
+document.getElementById("websiteh2").style.marginTop = "-1%";
+document.getElementById("webapph2").style.marginTop = "-10%";
+hidefilters();
 }
 
 function showfilters() {
@@ -168,9 +313,17 @@ function showfilters() {
 document.getElementById("filters").style.display = "block";
 document.getElementById("grid1").style.marginLeft = "19.5%";
 document.getElementById("grid2").style.marginLeft = "19.5%";
+
 document.getElementById("filtersbutton").style.display = "none";
 document.getElementById("closefilters").style.display = "block";
 document.getElementById("closefilters").innerHTML = "Close Menu";
+document.getElementById("grid1").style.opacity = "0.5";
+document.getElementById("grid2").style.opacity = "0.5";
+document.body.style.overflow = "hidden";
+
+document.getElementById("filters").style.marginTop = "1.4%";
+document.getElementById("topbutton").style.display = "none";
+window.scrollTo(0, 0);
 }
 
 function hidefilters() {
@@ -178,12 +331,54 @@ function hidefilters() {
 document.getElementById("filters").style.display = "none";
 
 document.getElementById("filtersbutton").style.display = "block";
+document.getElementById("topbutton").style.display = "block";
 document.getElementById("closefilters").style.display = "none";
 document.getElementById("filtersbutton").innerHTML = "Menu";
 
 document.getElementById("grid1").style.marginLeft = "13%";
 document.getElementById("grid2").style.marginLeft = "13%";
+document.getElementById("grid1").style.opacity = "1";
+document.getElementById("grid2").style.opacity = "1";
+document.body.style.overflowY = "scroll";
+
+
 }
+
+function scrolltop(){
+
+window.scrollTo(0, 0);
+}
+
+function architecture(){
+
+window.scrollTo(0, 42);
+}
+
+function UI1(){
+
+window.scrollTo(0, 560);
+}
+
+function UI2(){
+
+window.scrollTo(0, 1755);
+}
+
+function UI3(){
+
+window.scrollTo(0, 3564);
+}
+
+function UI4(){
+
+window.scrollTo(0, 4880);
+}
+
+function UI5(){
+
+window.scrollTo(0, 6185);
+}
+
 
 </script>
 </body>

@@ -2,17 +2,52 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<script>
 
+
+onload=function(){
+ document.getElementById("topbutton").style.opacity = "0.1";
+  document.getElementById("gridd").style.display = "none";
+}
+
+onscroll = function() {
+document.getElementById("expo").style.display = "block";
+ 
+
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop<3) {
+  document.getElementById("topbutton").style.opacity = "0.1";
+   document.getElementById("gridd").style.display = "none";
+  document.getElementById("header").style.marginTop = "0%";
+  document.getElementById("filtersbutton").style.marginTop = "0%";
+ 
+  
+}
+else{
+   document.getElementById("topbutton").style.opacity = "1";
+      document.getElementById("gridd").style.display = "block";
+
+  document.getElementById("header").style.marginTop = "-2.6%";
+   document.getElementById("header").style.marginLeft = "0.5%";
+    document.getElementById("header").style.width = "99%";
+  
+  document.getElementById("filtersbutton").style.marginTop = "0.5%";
+
+ 
+}
+}
+</script>
 </head>
 
 <style>
 
-#header{ position: fixed; background: white; top: -20px; padding-bottom:30px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+#topbutton{border:0px solid #C4C4C4;  position: fixed; background:white;  width:7%; font-size:140px; font-weight:old; color: silver; border-radius:0px; margin-left:71.8%; margin-top:33%; }
+#header{ position: fixed; background: white; top: -20px; padding-bottom:33px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
 	        box-shadow: 0 8px 6px -6px 	#C4C4C4; width:100%; height:70px;  }
-#grid1{ width: 80%;  background: 	C4C4C4; margin: 11%; margin-top: 6.63%; -webkit-column-count: 1; /* Chrome, Safari, Opera */
+#grid1{ width: 80%;  background: 	C4C4C4; margin: 20.5%; margin-top: 6.83%; -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
-    column-count: 1; }	
+    column-count: 1; }		
 
 #grid2{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
@@ -86,11 +121,33 @@ img{-webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 
 #home,#projects,#database,#design,#development,#photo,#leadership,#swe{position: relative; margin-top:-180%; border:0px solid silver;  background: white; width:9%; font-weight: bold; padding:0.5%; left:12%;}
 #home:hover,#projects:hover,#database:hover,#design:hover,#development:hover,#photo:hover,#leadership:hover,#swe:hover{ background: #C4C4C4;}
+#development{border-top:4px solid silver;  border-radius:0px;  text-transform: uppercase; font-style:oblique; }
+ul{list-style-type:square;}
 
+ul{list-style-type:square; margin-top:1%; background:	F8F8F8; width:67%; margin-left:2%;}
+ol{list-style-type:upper-roman;}
+#scotboard{text-transform: uppercase; text-align: left; border:0px solid  #C4C4C4; background: white; font-weight:bold; width:73.5%; -webkit-box-shadow: 0 10px 6px -7px #C4C4C4;
+	   -moz-box-shadow: 0 10px 6px -7px #C4C4C4;
+	        box-shadow: 0 10px 6px -7px #C4C4C4; padding-botton:2%;}
+#scotboard:hover{background: #C4C4C4; }
+#scotboard>a{text-decoration:none; color: black;}
+#scotboard2{text-align: left;  border:0px solid  #C4C4C4; background: white; font-weight:bold; width:69%; -webkit-box-shadow: 0 10px 6px -7px #C4C4C4;
+	   -moz-box-shadow: 0 10px 6px -7px #C4C4C4;
+	        box-shadow: 0 10px 6px -7px #C4C4C4; padding-botton:2%;}
+#scotboard2:hover{background: #C4C4C4; -webkit-box-shadow: 0 10px 6px -7px white;
+	   -moz-box-shadow: 0 10px 6px -7px white;
+	        box-shadow: 0 10px 6px -7px white;}
+#scotboard2>a{text-decoration:none; color: black;}
+#grid1{ width: 80%;  background: 	C4C4C4; margin: 20.5%; margin-top: 6.63%; -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1; }	
+#gridd{background:#E7E7E7; color:; font-weight:bold;  margin-top:-130.53%; margin-left:3%; padding:1.5px; width:93%; position: fixed; }
+#gridd>span{align:center; margin-left:4%; background:ilver; width:0%; cursor:pointer;}
+#gridd>span:hover{background: rgba(0,0,0,0.15);}
 </style>
 
  <div id="header">
-                <h2>Development</h2>
+                <h2 id="expo">Development</h2>
 		<a href="about.html"><button id="home">Home</button></a>		
 	    <a href="database.html"><button id="database">Database</button></a>
 		<a href="design.html"><button id="design">Design</button></a>
@@ -113,40 +170,145 @@ img{-webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 		
 				
         <div id="grid1">
+		<!--Top Button-->
+		<span id="topbutton" onclick ="scrolltop()" title="Scroll to the top">^</span>
+		
 	
 		 <ol>	      
-			  <li><b>Front-End</b> 
+			  <li><button id="scotboard"><b>Front-End</b></button>  
 				<ul>
-					<b>Tools:</b> HTML5, HTML DOM, CSS3, JavaScript,  jQuery, and Twitter Bootstrap UI
+					<b><u>Tools</u></b> 
+						<li> HTML5</li>
+						<li>HTML DOM</li>
+						<li>CSS3</li>
+						<li>JavaScript</li>
+						<li>jQuery</li>
+						<li>Twitter Bootstrap UI</li>
 				</ul>
 			  </li>
-		 </ol>
+		      
+			  <li><button id="scotboard"><b>Back-End</b></button>  
+				<ul>
+					<b><u>Tools</u></b>
+						<li>PHP </li>
+						<li>MySQL/SQL</li>
+				</ul>
+			  </li>
+		      
+			  <li><button id="scotboard"><b>Object-Oriented Programming</b></button>  
+				<ul>
+					<b><u>Tools</u></b> 
+						<li>PHP </li>
+						<li>Java</li>
+						<li>C++</li>
+				</ul>
+			  </li>
+			      
+			  <li><button id="scotboard"><b>Content Management System</b></button>  
+				<ul>
+					<b><u>Tools</u></b> 
+							<li>WordPress</li>
+							<li>PHP</li>
+							<li>JavaScript</li>
+							<li>jQuery</li>
+							<li>HTML5</li>
+							<li>CSS3</li>
+						<b><u>Examples</u></b> 
+							<li>WordPress.org (Developer site)<br>
+								<b>Example of WordPress.org website built</b><br><a href="http://scottwiggam.com/">Scott Wiggam site</a> 		
+							</li>
+							
+							<li>WordPress.com (Blog site)<br>
+								<b>Example of WordPressblog built</b><br><a href="http://vzidana.wordpress.com/">Vernon Zidana's blog</a> 		 	
+							</li>
+						
+				</ul>
+			  </li>
+			  
+			   <li><button id="scotboard"><b>API's</b></button>  
+				<ul>
+					<li>GoogleMaps API</li>
+					<li>HTML5 Drag and Drop API</li>
+				</ul>
+			  </li>
+			  
+			   <li><button id="scotboard"><b>Version Control</b></button>  
+				<ul>
+					<li>GitHub</li>
+					
+				</ul>
+			  </li>
+			  
+			   <li><button id="scotboard"><b>IDE's/Interpreters/Editors</b></button>  
+				<ul>
+					<li>Eclipse</li>
+					<li>Notepad++</li>
+					<li> xcode</li>
+					<li>Command Prompt</li>
+					
+				</ul>
+			  </li>
+			  
+			 <li><button id="scotboard"><b>Web Server Stack Package</b></button>  
+				<ul>
+					<li>XAMPP</li>
+					<li>MAMP</li>
+					
+				</ul>
+			  </li>
+			  
+			  
+			   <li><button id="scotboard"><b>Website Debugging Tool</b></button>  
+				<ul>
+					<li>Firebug</li>
+					
+					
+				</ul>
+			  </li>
+			
+			   <li><button id="scotboard"><b>Cross-Browser Testing</b></button>  
+				<ul>
+					<li>Chrome</li>
+					<li>Firefox</li>
+					<li> Opera</li>
+					<li> Internet Explorer</li>
+					<li>Safari</li>
+					
+				</ul>
+			  </li>
+			  
+			    <li><button id="scotboard"><b>Software Design Pattern</b></button>  
+				<ul>
+					<li>Model View Controller (MVC)</li>
+					
+					
+				</ul>
+			  </li>
+			  
+			    <li><button id="scotboard"><b>Technical Writing/Markup Tool</b></button>  
+				<ul>
+					<li>LaTex</li>
+					
+					
+				</ul>
+			  </li>
+			  
+			     <li><button id="scotboard"><b>Event-Driven Programming</b></button> 
+				<ul>
+					<li>Alerts, dialog boxes, confirmation boxes (both default and custom), event-listeners, event handlers etc	</li>
+					
+					
+				</ul>
+			  </li>
+			  
+			  
+			  
+			   
+			  
+				
 
-	      <ol>	      
-			  <li><b>Back-End</b> 
-				<ul>
-					<b>Tools:</b> PHP and MySQL/SQL
-				</ul>
-			  </li>
-		 </ol>
-		
-		 <ol>	      
-			  <li><b>Object-Oriented Programming</b> 
-				<ul>
-					<b>Tools:</b> PHP, Java, and C++
-				</ul>
-			  </li>
-		 </ol>
-
-		 <ol>	      
-			  <li><b>Content Management System</b> 
-				<ul>
-					<b>Tools:</b> WordPress, PHP, JavaScript, jQuery HTML5, CSS3
-						<ul>
-						<b>Tools:</b> WordPress, PHP, JavaScript, jQuery HTML5, CSS3, 
-						</ul>
-				</ul>
-			  </li>
+			  
+			  
 		 </ol>
 
 				
@@ -158,24 +320,42 @@ img{-webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 				
 		
 	
-		 <div id="grid3">
-                
+		
+			 <div id="gridd" >
+             
+					<span onclick="frontend()">Front-End</span>
+					<span onclick="backend()">Back-End</span>
+					<span onclick="oop()">OOP</span>
+					<span onclick="cms()">CMS</span>
+					<span onclick="api()">API's</span>
+						<span onclick="versioncontrol()">Version Control</span>
+							<span onclick="ide()">IDE's</span>
+								<span onclick="server()">Server</span>
+									<span onclick="debug()">Debug</span>
+										<span onclick="browsers()">Browsers</span>
+										<span onclick="patterns()">Patterns</span>
+											
+				
         </div>
 		
-						<script>
+<script>
 function myFunction() {
-
+hidefilters();
 document.getElementById("grid1").style.display = "none";
 document.getElementById("websiteh2").style.display = "none";
 document.getElementById("webapph2").style.display = "block";
-document.getElementById("webapph2").style.marginTop = "1%";
+document.getElementById("webapph2").style.marginTop = "2%";
 document.getElementById("grid2").style.display = "block";
+
+document.getElementById("tagline").style.display = "none";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-2.3%";
 
 
 }
 
 function myFunction2() {
-
+hidefilters();
 document.getElementById("grid2").style.display = "none";
 document.getElementById("websiteh2").style.display = "block";
 
@@ -183,6 +363,12 @@ document.getElementById("webapph2").style.display = "none";
 
 document.getElementById("grid1").style.display = "block";
 
+
+document.getElementById("tagline").style.display = "none";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-2.3%";
+document.getElementById("grid2").style.marginTop = "-1%";
+document.getElementById("websiteh2").style.marginTop = "2%";
 
 }
 
@@ -192,8 +378,15 @@ document.getElementById("grid1").style.display = "block";
 document.getElementById("grid2").style.display = "block";
 document.getElementById("websiteh2").style.display = "block";
 document.getElementById("webapph2").style.display = "block";
-document.getElementById("webapph2").style.marginTop = "-11%";
+document.getElementById("grid2").style.marginTop = "-1%";
 
+document.getElementById("tagline").style.display = "block";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-1.5%";
+document.getElementById("grid1").style.opacity = "1";
+document.getElementById("websiteh2").style.marginTop = "-1%";
+document.getElementById("webapph2").style.marginTop = "-10%";
+hidefilters();
 }
 
 function showfilters() {
@@ -201,9 +394,17 @@ function showfilters() {
 document.getElementById("filters").style.display = "block";
 document.getElementById("grid1").style.marginLeft = "19.5%";
 document.getElementById("grid2").style.marginLeft = "19.5%";
+
 document.getElementById("filtersbutton").style.display = "none";
 document.getElementById("closefilters").style.display = "block";
 document.getElementById("closefilters").innerHTML = "Close Menu";
+document.getElementById("grid1").style.opacity = "0.5";
+document.getElementById("grid2").style.opacity = "0.5";
+document.body.style.overflow = "hidden";
+
+document.getElementById("filters").style.marginTop = "1.4%";
+document.getElementById("topbutton").style.display = "none";
+window.scrollTo(0, 0);
 }
 
 function hidefilters() {
@@ -211,13 +412,78 @@ function hidefilters() {
 document.getElementById("filters").style.display = "none";
 
 document.getElementById("filtersbutton").style.display = "block";
+document.getElementById("topbutton").style.display = "block";
 document.getElementById("closefilters").style.display = "none";
 document.getElementById("filtersbutton").innerHTML = "Menu";
 
 document.getElementById("grid1").style.marginLeft = "13%";
 document.getElementById("grid2").style.marginLeft = "13%";
+document.getElementById("grid1").style.opacity = "1";
+document.getElementById("grid2").style.opacity = "1";
+document.body.style.overflowY = "scroll";
+
+
 }
 
+function scrolltop(){
+
+window.scrollTo(0, 0);
+}
+
+function frontend(){
+
+window.scrollTo(0, 39);
+}
+
+function backend(){
+
+window.scrollTo(0, 209);
+}
+
+function oop(){
+
+window.scrollTo(0, 311);
+}
+
+function cms(){
+
+window.scrollTo(0, 429);
+}
+
+function api(){
+
+window.scrollTo(0, 725);
+}
+
+function versioncontrol(){
+
+window.scrollTo(0, 805);
+}
+
+function ide(){
+
+window.scrollTo(0, 868);
+}
+
+function server(){
+
+window.scrollTo(0, 987);
+}
+
+function debug(){
+
+window.scrollTo(0, 1068);
+}
+
+function browsers(){
+
+window.scrollTo(0, 1132);
+}
+
+function patterns(){
+
+window.scrollTo(0, 1832);
+}
 </script>
 </body>
 </html>

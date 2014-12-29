@@ -2,12 +2,39 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<script>
+onload=function(){
+ document.getElementById("topbutton").style.opacity = "0.1";
 
+} 
+onscroll = function() {
+document.getElementById("expo").style.display = "block";
+
+
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop<300) {
+  document.getElementById("topbutton").style.opacity = "0.1";
+  document.getElementById("header").style.marginTop = "0%";
+  document.getElementById("filtersbutton").style.marginTop = "0%";
+  
+}
+else{
+   document.getElementById("topbutton").style.opacity = "1";
+  document.getElementById("header").style.marginTop = "-2.6%";
+   document.getElementById("header").style.marginLeft = "0.5%";
+    document.getElementById("header").style.width = "99%";
+  
+  document.getElementById("filtersbutton").style.marginTop = "0.55%";
+  
+ 
+}
+}
+</script>
 </head>
 
 <style>
 
-#header{ position: fixed; background: white; top: -20px; padding-bottom:30px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+#header{ position: fixed; background: white; top: -20px; padding-bottom:33px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
 	        box-shadow: 0 8px 6px -6px 	#C4C4C4; width:100%; height:70px;}
 #grid1{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
@@ -26,12 +53,13 @@
 h2{ text-align: center; margin-top:2%;}
 #webapp1,#webapp2,#webapp3,#webapp4,#website1,#website2,#website3,#website4{ border: 1px solid silver; margin-bottom:20px; background:#C4C4C4; text-align: center; }
 i,button{color:#181818; text-align: center;}
-button{border:0px solid silver; padding: 1%;  background: hite; text-align: center; width: 17.5%; margin-left:0.7%;}
+button{ border: none; padding: 1%;  background: hite; text-align: center; width: 17.5%; margin-left:0.7%; margin-bottom:0.17%;}
 #left,#right{position:relative ; bottom: 160px; }
 body{overflow-x:hidden;}
 button:hover{background: #C4C4C4; }
 #divider{background: white; }
-#webapp1:hover{ opacity:0.8; }
+#webapp1:hover, #webapp2:hover,#webapp3:hover,#webapp4:hover,#webapp5:hover,#webapp6:hover,#webapp5:hover,#webapp6:hover,#webapp7:hover,#webapp8:hover,
+#website1:hover,#website2:hover,#website3:hover,#website4:hover,#website5:hover,#website6:hover{ opacity:0.8; }
 #tagline{margin-top:0%; font-size: 13.5px; width:100%; padding-top:2%;}
 
 #allh1{font-size: 24px; }
@@ -40,9 +68,11 @@ button:hover{background: #C4C4C4; }
 #filtersbutton,#closefilters{border:1px solid silver;  position: relative;  bottom:50px; background: white; width:10%; }
 #filtersbutton:hover,#closefilters:hover{background: #C4C4C4; }
 #webapph2{margin-top:-11%;}
+#websiteh2{margin-top:-1%;}
 a{text-decoration: none;}
 
 
+#topbutton{border:0px solid ;  border: none; position: fixed; background:white;  width:7%; font-size:140px; font-weight:old; color: silver; border-radius:0px; margin-left:80.5%; margin-top:28%; }
 
   /* Scrollbar */
 ::-webkit-scrollbar {
@@ -83,10 +113,12 @@ a{text-decoration: none;}
 
 #home,#projects,#database,#design,#development,#photo,#leadership,#swe{position: relative; margin-top:-180%; border:0px solid silver;  background: white; width:9%; font-weight: bold; padding:0.5%; left:12%;}
 #home:hover,#projects:hover,#database:hover,#design:hover,#development:hover,#photo:hover,#leadership:hover,#swe:hover{ background: #C4C4C4;}
+#projects{border-top:4px solid silver;  border-radius:0px;  text-transform: uppercase; font-style:oblique; }
+
 </style>
 
 
-   <div id="header">  <h2> Expo</h2> 
+   <div id="header">  <h2 id="expo"> Expo</h2> 
  
    		<a href="about.html"><button id="home">Home</button></a>		
 	    <a href="database.html"><button id="database">Database</button></a>
@@ -129,7 +161,7 @@ a{text-decoration: none;}
 		
         </div>
 	
-	
+
 <body ><br><br><br>
      
 		
@@ -138,6 +170,8 @@ a{text-decoration: none;}
 		<center id="tagline">Showcase your Mobile Responsive Websites and Webapps</center>	
 		<center id="websiteh2"><h3>Websites</h3></center>
         <div id="grid1">
+			<!--Top Button-->
+		<span id="topbutton" onclick ="scrolltop()" title="Scroll to the top">^</span>
 		
                 <a href="proej1.html">
 				<div id="webapp1" class="webapp">
@@ -150,52 +184,67 @@ a{text-decoration: none;}
 					</p>
 				</div>
 				
-				<div id="website1">
+				 <a href="proej1.html">
+				<div id="website1" >
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
 				</div>
+				
+				 <a href="proej1.html">
 				 <div id="webapp2" class="webapp">
 					<img src="http://vzidana.files.wordpress.com/2014/12/1.jpg" style="width:100%;height:228px">
+						</a>
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					
 					</p>
 				</div>
 				
+				 <a href="proej1.html">
 				<div id="website2">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+						</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
 				</div>
 				
+				 <a href="proej1.html">
 				 <div id="webapp3" class="webapp">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					
 					</p>
 				</div>
 				
+				<a href="proej1.html">
 				<div id="website3">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
 				</div>
 				
+				<a href="proej1.html">
 				 <div id="webapp4" class="webapp">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					
 					</p>
 				</div>
 				
+				<a href="proej1.html">
 				<div id="website4">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
@@ -213,74 +262,93 @@ a{text-decoration: none;}
 				<center id="webapph2"><h3>Web Apps</h3></center>
 				
 				  <div id="grid2">
-		
+				  
+				<a href="proej1.html">
                 <div id="webapp1" class="webapp">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					
 					</p>
 				</div>
 				
+				<a href="proej1.html">
 				<div id="website1">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+						</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
 				</div>
+				
+				<a href="proej1.html">
 				 <div id="webapp2" class="webapp">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					
 					</p>
 				</div>
 				
+				<a href="proej1.html">
 				<div id="website2">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
 				</div>
 				
+				 <a href="proej1.html">
 				 <div id="webapp3" class="webapp">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					
 					</p>
 				</div>
 				
+				 <a href="proej1.html">
 				<div id="website3">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
 				</div>
 				
-				 <div id="webapp4" class="webapp">
+				 <a href="proej1.html">
+				<div id="webapp4" class="webapp">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+						</a>
 					<p class="webapp">Vernon Zidana
 					<br><i>Software Engineer</i>
 					
 					</p>
 				</div>
 				
+				 <a href="proej1.html">
 				<div id="website4">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
 				</div>
 				
+				 <a href="proej1.html">
 				<div id="website4">
 					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					</a>
 					<p>Vernon Zidana
 					<br><i>Software Engineer</i>
 					</p>
 				</div>
 				
-				
+			
 				</div>
 		
 	
@@ -294,7 +362,7 @@ hidefilters();
 document.getElementById("grid1").style.display = "none";
 document.getElementById("websiteh2").style.display = "none";
 document.getElementById("webapph2").style.display = "block";
-document.getElementById("webapph2").style.marginTop = "1%";
+document.getElementById("webapph2").style.marginTop = "2%";
 document.getElementById("grid2").style.display = "block";
 
 document.getElementById("tagline").style.display = "none";
@@ -318,6 +386,7 @@ document.getElementById("tagline").style.display = "none";
 document.getElementById("filters").style.position = "relative";
 document.getElementById("filters").style.marginTop = "-2.3%";
 document.getElementById("grid2").style.marginTop = "-1%";
+document.getElementById("websiteh2").style.marginTop = "2%";
 
 }
 
@@ -332,7 +401,10 @@ document.getElementById("grid2").style.marginTop = "-1%";
 document.getElementById("tagline").style.display = "block";
 document.getElementById("filters").style.position = "relative";
 document.getElementById("filters").style.marginTop = "-1.5%";
-
+document.getElementById("grid1").style.opacity = "1";
+document.getElementById("websiteh2").style.marginTop = "-1%";
+document.getElementById("webapph2").style.marginTop = "-10%";
+hidefilters();
 }
 
 function showfilters() {
@@ -348,8 +420,9 @@ document.getElementById("grid1").style.opacity = "0.5";
 document.getElementById("grid2").style.opacity = "0.5";
 document.body.style.overflow = "hidden";
 
-
-
+document.getElementById("filters").style.marginTop = "1.4%";
+document.getElementById("topbutton").style.display = "none";
+window.scrollTo(0, 0);
 }
 
 function hidefilters() {
@@ -357,6 +430,7 @@ function hidefilters() {
 document.getElementById("filters").style.display = "none";
 
 document.getElementById("filtersbutton").style.display = "block";
+document.getElementById("topbutton").style.display = "block";
 document.getElementById("closefilters").style.display = "none";
 document.getElementById("filtersbutton").innerHTML = "Menu";
 
@@ -366,6 +440,12 @@ document.getElementById("grid1").style.opacity = "1";
 document.getElementById("grid2").style.opacity = "1";
 document.body.style.overflowY = "scroll";
 
+
+}
+
+function scrolltop(){
+
+window.scrollTo(0, 0);
 
 }
 
