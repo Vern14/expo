@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<script>
+onload=function(){
+ document.getElementById("topbutton").style.opacity = "0.1";
+
+} 
+onscroll = function() {
+document.getElementById("expo").style.display = "block";
+
+
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop<300) {
+  document.getElementById("topbutton").style.opacity = "0.1";
+  document.getElementById("header").style.marginTop = "0%";
+  document.getElementById("filtersbutton").style.marginTop = "0%";
+  
+}
+else{
+   document.getElementById("topbutton").style.opacity = "1";
+  document.getElementById("header").style.marginTop = "-2.6%";
+   document.getElementById("header").style.marginLeft = "0.5%";
+    document.getElementById("header").style.width = "99%";
+  
+  document.getElementById("filtersbutton").style.marginTop = "0.55%";
+  
+ 
+}
+}
+</script>
+</head>
+
+<style>
+
+#header{ position: fixed; background: white; top: -20px; padding-bottom:33px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
+	        box-shadow: 0 8px 6px -6px 	#C4C4C4; width:100%; height:70px;}
+#grid0,#grid1{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
+	        box-shadow: 0 8px 6px -6px 	#C4C4C4;  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3; }	
+
+#grid2{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
+	        box-shadow: 0 8px 6px -6px 	#C4C4C4;  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3; }
+
+
+h2{ text-align: center; margin-top:2%;}
+#webapp1,#webapp2,#webapp3,#webapp4,#website1,#website2,#website3,#website4{ border: 1px solid silver; margin-bottom:20px; background:#C4C4C4; text-align: center; }
+i,button{color:#181818; text-align: center;}
+button{ border: none; padding: 1%;  background: hite; text-align: center; width: 17.5%; margin-left:0.7%; margin-bottom:0.17%;}
+#left,#right{position:relative ; bottom: 160px; }
+body{overflow-x:hidden;}
+button:hover{background: #C4C4C4; }
+#divider{background: white; }
+#webapp1:hover, #webapp2:hover,#webapp3:hover,#webapp4:hover,#webapp5:hover,#webapp6:hover,#webapp5:hover,#webapp6:hover,#webapp7:hover,#webapp8:hover,
+#website1:hover,#website2:hover,#website3:hover,#website4:hover,#website5:hover,#website6:hover{ opacity:0.8; }
+#tagline{margin-top:0%; font-size: 13.5px; width:100%; padding-top:2%;}
+
+#allh1{font-size: 24px; }
+#filters,#closefilters{position: fixed; display: none; }
+#filters{position: fixed; top : 17.5%; width:100%;  }
+#filtersbutton,#closefilters{border:1px solid silver;  position: relative;  bottom:50px; background: white; width:10%; }
+#filtersbutton:hover,#closefilters:hover{background: #C4C4C4; }
+#webapph2{margin-top:-11%;}
+#websiteh2{margin-top:-1%;}
+a{text-decoration: none;}
+
+
+#topbutton{border:0px solid ;  border: none; position: fixed; background:white;  width:7%; font-size:140px; font-weight:old; color: silver; border-radius:0px; margin-left:80.5%; margin-top:28%; }
+
+  /* Scrollbar */
+::-webkit-scrollbar {
+	width: 15px;
+  background: white; 
+  cursor:pointer;
+}
+
+/* Button */
+::-webkit-scrollbar-button {
+
+  width: 15px;
+  height: 79px;
+
+}
+
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 80px;
+    border-radius: 80px;
+	  background: white; 
+	
+	 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 50px;
+   
+    background: #C4C4C4;
+	
+    
+}
+
+#home,#projects,#database,#design,#development,#photo,#leadership,#swe{position: relative; margin-top:-180%; border:0px solid silver;  background: white; width:9%; font-weight: bold; padding:0.5%; left:12%;}
+#home:hover,#projects:hover,#database:hover,#design:hover,#development:hover,#photo:hover,#leadership:hover,#swe:hover{ background: #C4C4C4;}
+#projects{border-top:4px solid silver;  border-radius:0px;  text-transform: uppercase; font-style:oblique; }
+
+</style>
+
+
+   <div id="header">  <h2 id="expo"> Expo</h2> 
+ 
+   		<a href="about.html"><button id="home">Home</button></a>		
+	    <a href="database.html"><button id="database">Database</button></a>
+		<a href="design.html"><button id="design">Design</button></a>
+		<a href="development.html"><button id="development">Development</button></a>		
+	
+	
+		<a href="index.html"><button id="projects">Projects</button></a>
+		<a href="swe.html"><button id="swe">SoftEng</button></a><br>
+                
+				<button id ="filtersbutton" onclick="showfilters()">Menu</button><button id ="closefilters" onclick="hidefilters()">Filters</button>
+		
+				<div id ="filters">
+					<button id="divider" ><b >FILTER BY TYPE</b></button><br>
+					<button onclick="showall()">No Filter</button><br>
+					<button id="webapps" onclick="myFunction()">WebApps</button><br>
+					<button id="websites" onclick="myFunction2()">Websites</button><br>
+				
+				
+				
+				</div>
+			
+				
+	
+		
+		
+		
+        </div>
+	
+
+<body ><br><br><br>
+     
+		
+		
+			
+		<center id="tagline">Showcase your Mobile Responsive Websites and Webapps</center>	
+		<center id="websiteh2"><h3>Websites</h3></center>
+		  <div id="grid0">
+			<!--Top Button-->
+		<span id="topbutton" onclick ="scrolltop()" title="Scroll to the top">^</span>
+		
+                <a href="http://vern14.github.io/C4E-new-website/">
+				<div id="webapp1" class="webapp">
+					<img src="c4e weebsite.jpg" style="width:100%;height:228px">
+				</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>c4e</i>
+					<b>:<a>.</a></b>
+					
+					</p>
+				</div>
+				
+				 <a href="http://vern14.github.io/Twitter_Bootstrap_form/">
+				 <div id="webapp3" class="webapp">
+					<img src="bootstrap.jpg" style="width:100%;height:228px">
+					</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>form bootstrap</i>
+					
+					</p>
+				</div>
+				
+				 <a href="http://vern14.github.io/Center_for_Entrepreneurship_Student_Business_Development_Worksheet/">
+				 <div id="webapp2" class="webapp">
+					<img src="biz worksheet.jpg" style="width:100%;height:228px">
+						</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>biz worksheet</i>
+					
+					</p>
+				</div>
+				
+				 <a href="http://vern14.github.io/Social_Entrepreneurship_Business_Plan_in_HTML_and_CSS/">
+				<div id="website2">
+					<img src="biz plan.jpg" style="width:100%;height:228px">
+						</a>
+					<p>Vernon Zidana
+					<br><i>biz plan</i>
+					</p>
+				</div>
+				
+				 <a href="http://vern14.github.io/Center_for_Entrepreneurship_Africa_Business_Network/">
+				<div id="website1" >
+					<img src="africa biz.jpg" style="width:100%;height:228px">
+					</a>
+					<p>Vernon Zidana
+					<br><i>africa busuness</i>
+					</p>
+				</div>
+				
+				
+				
+				<a href="http://vern14.github.io/Custom_Google_PacMan_Doodle/">
+				<div id="website3">
+					<img src="pacman.jpg" style="width:100%;height:228px">
+					</a>
+					<p>Vernon Zidana
+					<br><i>google pacman</i>
+					</p>
+				</div>
+				
+			
+				
+				</div>
+		
+		
+        <div id="grid1">
+			<!--Top Button-->
+		<span id="topbutton" onclick ="scrolltop()" title="Scroll to the top">^</span>
+		
+                <a href="http://vern14.github.io/C4E-new-website/">
+				<div id="webapp1" class="webapp">
+					<img src="c4e weebsite.jpg" style="width:100%;height:228px">
+				</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>c4e</i>
+					<b>:<a>.</a></b>
+					
+					</p>
+				</div>
+				
+				 <a href="http://vern14.github.io/Twitter_Bootstrap_form/">
+				 <div id="webapp3" class="webapp">
+					<img src="bootstrap.jpg" style="width:100%;height:228px">
+					</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>form bootstrap</i>
+					
+					</p>
+				</div>
+				
+				 <a href="http://vern14.github.io/Center_for_Entrepreneurship_Student_Business_Development_Worksheet/">
+				 <div id="webapp2" class="webapp">
+					<img src="biz worksheet.jpg" style="width:100%;height:228px">
+						</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>biz worksheet</i>
+					
+					</p>
+				</div>
+				
+				 <a href="http://vern14.github.io/Social_Entrepreneurship_Business_Plan_in_HTML_and_CSS/">
+				<div id="website2">
+					<img src="biz plan.jpg" style="width:100%;height:228px">
+						</a>
+					<p>Vernon Zidana
+					<br><i>biz plan</i>
+					</p>
+				</div>
+				
+				 <a href="http://vern14.github.io/Center_for_Entrepreneurship_Africa_Business_Network/">
+				<div id="website1" >
+					<img src="africa biz.jpg" style="width:100%;height:228px">
+					</a>
+					<p>Vernon Zidana
+					<br><i>africa busuness</i>
+					</p>
+				</div>
+				
+				
+				
+				<a href="http://vern14.github.io/Custom_Google_PacMan_Doodle/">
+				<div id="website3">
+					<img src="pacman.jpg" style="width:100%;height:228px">
+					</a>
+					<p>Vernon Zidana
+					<br><i>google pacman</i>
+					</p>
+				</div>
+				
+			
+				
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<center id="webapph2"><h3>Web Apps</h3></center>
+				
+				  <div id="grid2">
+				  
+				  <a href="https://www.youtube.com/watch?v=lJM2oFMoDkM">
+				<div id="website2">
+					<img src="scotboard5.jpg" style="width:100%;height:228px">
+					</a>
+					<p>Vernon Zidana
+					<br><i>scotboard</i>
+					</p>
+				</div>
+				  
+				
+				
+				
+				
+				 <a href="http://vern14.github.io/expo/">
+				 <div id="webapp3" class="webapp">
+					<img src="expo.jpg" style="width:100%;height:228px">
+					</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>expo</i>
+					
+					</p>
+				
+				
+				
+				
+				
+			
+				<a href="http://vern14.github.io/first_ScotBoard_UI_/">
+                <div id="webapp1" class="webapp">
+					<img src="ScotBoard UI1 impl.jpg" style="width:100%;height:228px">
+					</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>ui1</i>
+					
+					</p>
+				</div>
+				
+				
+				
+				</div>
+				
+				
+			
+				</div>
+		
+	
+		 <div id="grid3">
+                
+        </div>
+		
+<script>
+function myFunction() {
+hidefilters();
+document.getElementById("grid1").style.display = "none";
+document.getElementById("websiteh2").style.display = "none";
+document.getElementById("webapph2").style.display = "block";
+document.getElementById("webapph2").style.marginTop = "2%";
+document.getElementById("grid2").style.display = "block";
+
+document.getElementById("tagline").style.display = "none";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-2.3%";
+
+
+}
+
+function myFunction2() {
+hidefilters();
+document.getElementById("grid2").style.display = "none";
+document.getElementById("websiteh2").style.display = "block";
+
+document.getElementById("webapph2").style.display = "none";
+
+document.getElementById("grid1").style.display = "block";
+
+
+document.getElementById("tagline").style.display = "none";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-2.3%";
+document.getElementById("grid2").style.marginTop = "-1%";
+document.getElementById("websiteh2").style.marginTop = "2%";
+
+}
+
+function showall() {
+
+document.getElementById("grid1").style.display = "block";
+document.getElementById("grid2").style.display = "block";
+document.getElementById("websiteh2").style.display = "block";
+document.getElementById("webapph2").style.display = "block";
+document.getElementById("grid2").style.marginTop = "-1%";
+
+document.getElementById("tagline").style.display = "block";
+document.getElementById("filters").style.position = "relative";
+document.getElementById("filters").style.marginTop = "-1.5%";
+document.getElementById("grid1").style.opacity = "1";
+document.getElementById("websiteh2").style.marginTop = "-1%";
+document.getElementById("webapph2").style.marginTop = "-10%";
+hidefilters();
+}
+
+function showfilters() {
+
+document.getElementById("filters").style.display = "block";
+document.getElementById("grid1").style.marginLeft = "19.5%";
+document.getElementById("grid2").style.marginLeft = "19.5%";
+
+document.getElementById("filtersbutton").style.display = "none";
+document.getElementById("closefilters").style.display = "block";
+document.getElementById("closefilters").innerHTML = "Close Menu";
+document.getElementById("grid1").style.opacity = "0.5";
+document.getElementById("grid2").style.opacity = "0.5";
+document.body.style.overflow = "hidden";
+
+document.getElementById("filters").style.marginTop = "1.4%";
+document.getElementById("topbutton").style.display = "none";
+window.scrollTo(0, 0);
+}
+
+function hidefilters() {
+
+document.getElementById("filters").style.display = "none";
+
+document.getElementById("filtersbutton").style.display = "block";
+document.getElementById("topbutton").style.display = "block";
+document.getElementById("closefilters").style.display = "none";
+document.getElementById("filtersbutton").innerHTML = "Menu";
+
+document.getElementById("grid1").style.marginLeft = "13%";
+document.getElementById("grid2").style.marginLeft = "13%";
+document.getElementById("grid1").style.opacity = "1";
+document.getElementById("grid2").style.opacity = "1";
+document.body.style.overflowY = "scroll";
+
+
+}
+
+function scrolltop(){
+
+window.scrollTo(0, 0);
+
+}
+
+</script>
+</body>
+</html>
+ 

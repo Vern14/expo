@@ -37,13 +37,18 @@ else{
 #header{ position: fixed; background: white; top: -20px; padding-bottom:33px; font-weight: bold; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
 	        box-shadow: 0 8px 6px -6px 	#C4C4C4; width:100%; height:70px;}
-#grid1{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+#grid{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
-	        box-shadow: 0 8px 6px -6px 	#C4C4C4;  -webkit-column-count: 4; /* Chrome, Safari, Opera */
-    -moz-column-count: 4; /* Firefox */
-    column-count: 4; }	
+	        box-shadow: 0 8px 6px -6px 	#C4C4C4;  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3; }	
+#grid1{  display:none; width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
+	        box-shadow: 0 8px 6px -6px 	#C4C4C4;  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3; }	
 
-#grid2{ width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
+#grid2{ display:none; width: 80%;  background: 	C4C4C4; margin: 13%; margin-top: 1%; -webkit-box-shadow: 0 8px 6px -6px #C4C4C4;
 	   -moz-box-shadow: 0 8px 6px -6px #C4C4C4;
 	        box-shadow: 0 8px 6px -6px 	#C4C4C4;  -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
@@ -65,14 +70,14 @@ button:hover{background: #C4C4C4; }
 #allh1{font-size: 24px; }
 #filters,#closefilters{position: fixed; display: none; }
 #filters{position: fixed; top : 17.5%; width:100%;  }
-#filtersbutton,#closefilters{border:1px solid silver;  position: relative;  bottom:50px; background: white; width:10%; }
+#filtersbutton,#closefilters{display:none; border:1px solid silver;  position: relative;  bottom:50px; background: white; width:10%; }
 #filtersbutton:hover,#closefilters:hover{background: #C4C4C4; }
 #webapph2{margin-top:-11%;}
 #websiteh2{margin-top:-1%;}
 a{text-decoration: none;}
 
 
-#topbutton{border:0px solid ;  border: none; position: fixed; background:white;  width:7%; font-size:140px; font-weight:old; color: silver; border-radius:0px; margin-left:80.5%; margin-top:28%; }
+#topbutton{ cursor: pointer; border:0px solid ;  border: none; position: fixed; background:white;  width:7%; font-size:140px; font-weight:old; color: silver; border-radius:0px; margin-left:80.5%; margin-top:28%; }
 
   /* Scrollbar */
 ::-webkit-scrollbar {
@@ -111,10 +116,10 @@ a{text-decoration: none;}
     
 }
 
-#home,#projects,#database,#design,#development,#photo,#leadership,#swe{position: relative; margin-top:-180%; border:0px solid silver;  background: white; width:9%; font-weight: bold; padding:0.5%; left:12%;}
+#home,#projects,#database,#design,#development,#photo,#leadership,#swe{position: relative; margin-top:-180%; border:0px solid silver;  background: white; width:9%; font-weight: bold; padding:0.5%; left:19.4%;}
 #home:hover,#projects:hover,#database:hover,#design:hover,#development:hover,#photo:hover,#leadership:hover,#swe:hover{ background: #C4C4C4;}
 #projects{border-top:4px solid silver;  border-radius:0px;  text-transform: uppercase; font-style:oblique; }
-
+#grid3{display:none; }
 </style>
 
 
@@ -124,8 +129,8 @@ a{text-decoration: none;}
 	    <a href="database.html"><button id="database">Database</button></a>
 		<a href="design.html"><button id="design">Design</button></a>
 		<a href="development.html"><button id="development">Development</button></a>		
-		<a href="leadership.html"><button id="leadership">Leadership</button></a>
-		<a href="photo.html"><button id="photo">Photo</button></a>
+	
+	
 		<a href="index.html"><button id="projects">Projects</button></a>
 		<a href="swe.html"><button id="swe">SoftEng</button></a><br>
                 
@@ -136,20 +141,7 @@ a{text-decoration: none;}
 					<button onclick="showall()">No Filter</button><br>
 					<button id="webapps" onclick="myFunction()">WebApps</button><br>
 					<button id="websites" onclick="myFunction2()">Websites</button><br>
-					<button id="divider"><b>FILTER BY TOOLS</b></button><br>
-					<button onclick="myFunction()">No Filter</button><br>
-					<button>HTML & CSS</button><br>
-					<button>JavaScript</button><br>
-					<button>J-Query</button><br>				
-					<button>Php & MySQL</button><br>
-					<button>WordPress</button><br>
-					<button>Bootstrap</button><br>					
-					<button id="divider"><b>FILTER BY PROJECT</b></button><br>					
-					<button>Solo Project</button><br>
-					<button>Group Project</button><br>
-					<button id="divider"><b>FILTER BY YEAR</b></button><br>					
-					<button>2014</button><br>
-					<button>2013</button><br>
+				
 				
 				
 				</div>
@@ -162,94 +154,184 @@ a{text-decoration: none;}
         </div>
 	
 
-<body ><br><br><br>
+<body >
      
-		
+		<br><br><br>
 		
 			
-		<center id="tagline">Showcase your Mobile Responsive Websites and Webapps</center>	
-		<center id="websiteh2"><h3>Websites</h3></center>
+		<center id="tagline">Showcasing your Mobile Responsive Websites and Webapps</center>	<br>
+		<center><b>SKILLS USED ON ALL PROJECTS</b><br>
+		
+         HTML5, CSS3, JavaScript, jQuery, MVC,<br>  API's, PHP5, 
+		 MySQL, and MS Paint 
+		
+		</center>
+		<div id="grid">
+			<!--Top Button-->
+		<span id="topbutton" onclick ="scrolltop()" title="Scroll to the top">^</span>
+		
+		
+				
+				
+				
+			
+				
+				<a href="scotboardpro1.html">
+				 <div id="webapp2" class="webapp">
+					<img src="scotboard5.jpg" style="width:100%;height:228px">
+						</a>
+					<p class="webapp">Scotboard
+					<br><i></i>
+					
+					</p>
+				</div>
+		
+                <a href="c4ewebsiteproj4.html">
+				<div id="webapp1" class="webapp">
+					<img src="c4e weebsite.jpg" style="width:100%;height:228px">
+				</a>
+					<p class="webapp">Center for Entrepreneurship Website
+					<br><i></i>
+					<b><a></a></b>
+					
+					</p>
+				</div>
+				
+				<a href="googlepacmanproj7.html">
+				<div id="website3">
+					<img src="pacman.jpg" style="width:100%;height:228px">
+					</a>
+					<p>Google Pacman Doodle Custom UI
+					<br><i></i>
+					</p>
+				</div>
+								
+				
+				
+					<a href="expoproj2.html">
+				 <div id="webapp2" class="webapp">
+					<img src="expo.jpg" style="width:100%;height:228px">
+						</a>
+					<p class="webapp">expo
+					<br><i></i>
+					
+					</p>
+				</div>
+				
+				
+				 <a href="c4ebusinessworksheetproj5.html">
+				 <div id="webapp2" class="webapp">
+					<img src="biz worksheet.jpg" style="width:100%;height:228px">
+						</a>
+					<p class="webapp">Online Student Business Development Worksheet
+					<br><i></i>
+					
+					</p>
+				</div>
+				
+				<a href="scotboardui1proj8.html">
+				 <div id="webapp2" class="webapp">
+					<img src="ScotBoard UI1 impl.jpg" style="width:100%;height:228px">
+						</a>
+					<p class="webapp">Automating CS Major course progression flowchart
+					<br><i></i>
+					
+					</p>
+				</div>
+				
+				
+				
+				
+				
+			
+				 <a href="africabusinessproj3.html">
+				<div id="website1" >
+					<img src="africa biz.jpg" style="width:100%;height:228px">
+					</a>
+					<p>Africa Business Network
+					<br><i></i>
+					</p>
+				</div>
+			
+			
+			
+				
+			
+			
+			
+				 <a href="bizplanproj6.html">
+				<div id="website2">
+					<img src="biz plan.jpg" style="width:100%;height:228px">
+						</a>
+					<p>SI Business Plan
+					<br><i></i>
+					</p>
+				</div>
+			
+			
+			
+			
+			
+			  
+				
+		</div>
+		
         <div id="grid1">
 			<!--Top Button-->
 		<span id="topbutton" onclick ="scrolltop()" title="Scroll to the top">^</span>
 		
-                <a href="proej1.html">
+                <a href="http://vern14.github.io/C4E-new-website/">
 				<div id="webapp1" class="webapp">
-					<img src="http://www.eurweb.com/wp-content/uploads/2012/12/neyo.jpeg" style="width:100%;height:228px">
+					<img src="c4e weebsite.jpg" style="width:100%;height:228px">
 				</a>
-					<p class="webapp">Vernon Zidana
-					<br><i>Software Engineer</i>
-					<b>:<a>.</a></b>
+					<p class="webapp">c4e
+					<br><i></i>
+					<b><a></a></b>
 					
 					</p>
 				</div>
 				
-				 <a href="proej2.html">
-				<div id="website1" >
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-					</a>
-					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
-					</p>
-				</div>
-				
-				 <a href="proej3.html">
+								
+				 <a href="http://vern14.github.io/Center_for_Entrepreneurship_Student_Business_Development_Worksheet/">
 				 <div id="webapp2" class="webapp">
-					<img src="http://vzidana.files.wordpress.com/2014/12/1.jpg" style="width:100%;height:228px">
+					<img src="biz worksheet.jpg" style="width:100%;height:228px">
 						</a>
 					<p class="webapp">Vernon Zidana
-					<br><i>Software Engineer</i>
+					<br><i>biz worksheet</i>
 					
 					</p>
 				</div>
 				
-				 <a href="proej4.html">
+				 <a href="http://vern14.github.io/Social_Entrepreneurship_Business_Plan_in_HTML_and_CSS/">
 				<div id="website2">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					<img src="biz plan.jpg" style="width:100%;height:228px">
 						</a>
 					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
+					<br><i>biz plan</i>
 					</p>
 				</div>
 				
-				 <a href="proej5.html">
-				 <div id="webapp3" class="webapp">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+				 <a href="http://vern14.github.io/Center_for_Entrepreneurship_Africa_Business_Network/">
+				<div id="website1" >
+					<img src="africa biz.jpg" style="width:100%;height:228px">
 					</a>
-					<p class="webapp">Vernon Zidana
-					<br><i>Software Engineer</i>
-					
+					<p>Vernon Zidana
+					<br><i>africa busuness</i>
 					</p>
 				</div>
 				
-				<a href="proej6.html">
+				
+				
+				<a href="http://vern14.github.io/Custom_Google_PacMan_Doodle/">
 				<div id="website3">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					<img src="pacman.jpg" style="width:100%;height:228px">
 					</a>
 					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
+					<br><i>google pacman</i>
 					</p>
 				</div>
 				
-				<a href="proej7.html">
-				 <div id="webapp4" class="webapp">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-					</a>
-					<p class="webapp">Vernon Zidana
-					<br><i>Software Engineer</i>
-					
-					</p>
-				</div>
-				
-				<a href="proej8.html">
-				<div id="website4">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-					</a>
-					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
-					</p>
-				</div>
-				<br>
+			
 				
 				</div>
 				
@@ -259,94 +341,53 @@ a{text-decoration: none;}
 				
 				
 				
-				<center id="webapph2"><h3>Web Apps</h3></center>
+	
 				
 				  <div id="grid2">
+				  <center id="websiteh2"><h3>Websites</h3></center>
+			<center id="webapph2"><h3>Web Apps</h3></center>
 				  
-				<a href="proej1.html">
-                <div id="webapp1" class="webapp">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-					</a>
-					<p class="webapp">Vernon Zidana
-					<br><i>Software Engineer</i>
-					
-					</p>
-				</div>
-				
-				<a href="proej1.html">
-				<div id="website1">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-						</a>
-					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
-					</p>
-				</div>
-				
-				<a href="proej1.html">
-				 <div id="webapp2" class="webapp">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-					</a>
-					<p class="webapp">Vernon Zidana
-					<br><i>Software Engineer</i>
-					
-					</p>
-				</div>
-				
-				<a href="proej1.html">
+				  <a href="https://www.youtube.com/watch?v=lJM2oFMoDkM">
 				<div id="website2">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					<img src="scotboard5.jpg" style="width:100%;height:228px">
 					</a>
 					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
+					<br><i>scotboard</i>
 					</p>
 				</div>
+				  
 				
-				 <a href="proej1.html">
+				
+				
+				
+				 <a href="http://vern14.github.io/expo/">
 				 <div id="webapp3" class="webapp">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
+					<img src="expo.jpg" style="width:100%;height:228px">
 					</a>
 					<p class="webapp">Vernon Zidana
-					<br><i>Software Engineer</i>
+					<br><i>expo</i>
+					
+					</p>
+				
+				</div>
+				
+				
+				
+			
+				<a href="http://vern14.github.io/first_ScotBoard_UI_/">
+                <div id="webapp1" class="webapp">
+					<img src="ScotBoard UI1 impl.jpg" style="width:100%;height:228px">
+					</a>
+					<p class="webapp">Vernon Zidana
+					<br><i>ui1</i>
 					
 					</p>
 				</div>
 				
-				 <a href="proej1.html">
-				<div id="website3">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-					</a>
-					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
-					</p>
-				</div>
 				
-				 <a href="proej1.html">
-				<div id="webapp4" class="webapp">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-						</a>
-					<p class="webapp">Vernon Zidana
-					<br><i>Software Engineer</i>
-					
-					</p>
-				</div>
 				
-				 <a href="proej1.html">
-				<div id="website4">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-					</a>
-					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
-					</p>
-				</div>
 				
-				 <a href="proej1.html">
-				<div id="website4">
-					<img src="http://media.breitbart.com/media/2014/12/denzel-denzel-washington-s-back-to-badass-in-equalizer-clip1.jpeg" style="width:100%;height:228px">
-					</a>
-					<p>Vernon Zidana
-					<br><i>Software Engineer</i>
-					</p>
-				</div>
+				
 				
 			
 				</div>
