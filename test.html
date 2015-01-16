@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: lightgreen;
+}
+#p{display:block;}
+#pp{display:none;}
+@media screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+	#p{display:none;}
+	#pp{display:block; border: 1px solid black;}
+}
+</style>
+</head>
+<body>
+
+<p id="p">Resize the browserwindow. When the width of this document is less than 300 pixels, the background-color is "lightblue", otherwise it is "lightgreen".</p>
+<p id="pp">yup".</p>
+
+</body>
+</html>
+
